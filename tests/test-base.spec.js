@@ -17,7 +17,7 @@ customtest.describe('Test Suite', () => {
           const dataService =  new DataService();
           const recToken = await dataService.getToken(restApidetails.url,restApidetails.user,restApidetails.password);
 
-           const postJiraTicketResponse = await dataService.addJiraTicketPostCall(200,restApidetails.url+'/rest/api/2/issue');
+          const postJiraTicketResponse = await dataService.addJiraTicketPostCall(200,restApidetails.url+'/rest/api/2/issue');
           jiraTicketId=postJiraTicketResponse.id;
           console.log("Post Jira Ticket Response : "+ postJiraTicketResponse.id);
           expect(postJiraTicketResponse.id).toBeTruthy();
